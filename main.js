@@ -56,7 +56,7 @@ camera.lookAt(0, 0, 0);
 
 
 //set a renderer size
-renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.setSize(window.innerWidth, 525)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 renderer.shadowMap.enabled = true
     //renderer.outputEncoding = true
@@ -111,7 +111,7 @@ function animate() {
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
-    renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.setSize(window.innerWidth, 525)
 }
 
 window.addEventListener('resize', onWindowResize, false)
