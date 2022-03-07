@@ -56,7 +56,7 @@ camera.lookAt(0, 0, 0);
 
 
 //set a renderer size
-renderer.setSize(window.innerWidth, 525)
+renderer.setSize(window.innerWidth, (window.innerHeight - 70))
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 renderer.shadowMap.enabled = true
     //renderer.outputEncoding = true
@@ -96,7 +96,7 @@ controls.maxPolarAngle = ((Math.PI / 2) * 1.33)
 controls.minAzimuthAngle = -((Math.PI / 2) / 1.5) / 4
 controls.maxAzimuthAngle = ((Math.PI / 2) / 1.5) / 4
 controls.enableDamping = true
-controls.dampingFactor = 0.01
+controls.dampingFactor = 0.007
 controls.enablePan = false
 controls.enableZoom = false
 
@@ -111,7 +111,7 @@ function animate() {
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
-    renderer.setSize(window.innerWidth, 525)
+    renderer.setSize(window.innerWidth, (window.innerHeight - 70))
 }
 
 window.addEventListener('resize', onWindowResize, false)
